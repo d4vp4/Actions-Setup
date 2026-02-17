@@ -1,4 +1,6 @@
-name: "Workflow initiated by ${{ github.actor }}"
+name: CI Workflow
+
+run-name: Workflow initiated by ${{ github.actor }}
 
 on:
   pull_request:
