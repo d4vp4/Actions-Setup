@@ -1,0 +1,28 @@
+name: Workflow initiated by ${{ github.actor }}
+
+on:
+  pull_request:
+
+env:
+  GITHUB_ACTIONS: "assigned_in_workflow_level"
+
+jobs:
+  github-task-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display GITHUB_ACTIONS environment variable
+        run: echo "The GITHUB_ACTIONS variable is: $GITHUB_ACTIONS"
+
+      - name: Show Branch and Repository name
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Target Branch: ${{ github.base_ref }}"
+          echo "Source Branch: ${{ github.head_ref }}"
+
+      - name: Show Trigger Event
+        run: echo "This workflow was triggered by: ${{ github.event_name }}"
+          echo test, and deploy your project.
