@@ -1,4 +1,4 @@
-name: Workflow initiated by ${{ github.actor }}
+name: "Workflow initiated by ${{ github.actor }}"
 
 on:
   pull_request:
@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "The GITHUB_ACTIONS variable is: $GITHUB_ACTIONS"
 
-      - name: Show Branch and Repository name
+      - name: Show Branch and Repository info
         run: |
           echo "Repository: ${{ github.repository }}"
           echo "Target Branch: ${{ github.base_ref }}"
