@@ -25,4 +25,3 @@ jobs:
 
       - name: Show Trigger Event
         run: echo "This workflow was triggered by: ${{ github.event_name }}"
-          echo test, and deploy your project.
